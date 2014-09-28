@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$navy: #2f3537;
+$light: #b2cad1;
+
+.clearfix {
+  clear: both;
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $navy;
+  font-family: Avenir serif;
+}
+
+.gif {
+  @extend .clearfix;
+  width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.gif-container {
+  overflow: scroll;
+  min-width: 600px;
+  padding: 20px;
+}
+
+img {
+  border-radius: 50%;
+  padding: 10px;
+  width: 600px;
+  border: 2px solid $light;
+}
+
+.playlist {
+  height: 300px;
+  width: 300px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.title {
+  text-align: center;
+  color: $light;
+  border-radius: 10px;
+  border: 2px solid $light;
+  padding: 20px;
+  font-size: 60px;
+  width: 300px;
+
+  em {
+    font-weight: bold;
+    color: lavender;
+  }
+
+  span {
+    color: paleturquoise;
+  }
+}
+
+.sidebar {
+  display: inline-block;
+  width: 320px;
+  float: left;
+  margin: 10px;
+  padding-right: 20px;
+  border-right: 2px solid $light;
+  text-align: center;
+
+  p {
+    color: $light;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.wrapper {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+@media all and (max-width: 950px) {
+
+  .sidebar {
+    display: block;
+    border-right: 0 solid $light;
+    border-bottom: 2px solid $light;
+    height: 400px;
+    width: 96%;
+    overflow: scroll;
+    margin: 2%;
+    padding: 0;
+  }
+
+  .gif-container {
+    display: block;
+  }
+
+  .title {
+    margin: auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .sidebar {
+    float: none;
+  }
+
+  img, .gif, .gif-container {
+    min-width: 300px;
+    width:100%
+  }
+
+}
+
+.neptune {
+  opacity: .25;
+  //background-color: whitesmoke;
+  z-index: -1;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: -200px 200px 5px lavender;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  -webkit-filter: blur(3px)
+}
+
