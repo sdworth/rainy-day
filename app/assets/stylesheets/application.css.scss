@@ -38,6 +38,7 @@ $light: #b2cad1;
 }
 
 body {
+  color: $light;
   margin: 0;
   padding: 0;
   background-color: $navy;
@@ -70,11 +71,11 @@ img {
   width: 300px;
   margin-top: 50px;
   margin-bottom: 70px;
+  overflow: scroll;
 }
 
 .title {
   text-align: center;
-  color: $light;
   border-radius: 10px;
   border: 2px solid $light;
   padding: 20px;
@@ -142,22 +143,103 @@ img {
 
   img, .gif, .gif-container {
     min-width: 300px;
-    width:100%
+    width: 100%
   }
 
 }
 
-.neptune {
-  opacity: .25;
-  //background-color: whitesmoke;
+.planet {
   z-index: -1;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  box-shadow: -200px 200px 5px lavender;
+  opacity: .25;
   position: absolute;
-  right: 20px;
-  top: 20px;
-  -webkit-filter: blur(3px)
+  border-radius: 50%;
+  //-webkit-filter: blur(3px)
 }
 
+.neptune {
+  @extend .planet;
+  width: 200px;
+  height: 200px;
+  right: 20px;
+  top: 20px;
+}
+
+.pluto {
+  @extend .planet;
+  bottom: 200px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+}
+
+.uranus {
+  @extend .planet;
+  width: 150px;
+  height: 180px;
+  top: 200px;
+  left: 50px;
+}
+
+.jupiter {
+  @extend .planet;
+  width: 300px;
+  height: 250px;
+  top: 10px;
+  left: 400px;
+}
+
+.mercury {
+  @extend .planet;
+  width: 50px;
+  height: 90px;
+  left: 20px;
+  bottom: 20px;
+}
+
+.luna {
+  @extend .planet;
+  width: 120px;
+  height: 130px;
+  bottom: 500px;
+  right: 300px;
+}
+
+.saturn {
+  @extend .planet;
+  width: 280px;
+  height: 310px;
+  bottom: 50px;
+  right: 250px;
+}
+
+.venus {
+  @extend .planet;
+  width: 220px;
+  height: 240px;
+  top: 40px;
+  left: 300px;
+}
+
+.mars {
+  @extend .planet;
+  height: 320px;
+  width: 270px;
+  bottom: 150px;
+  right: 40px;
+}
+
+.polaris {
+  @extend .planet;
+  height: 315px;
+  width: 305px;
+  right: 450px;
+  top: 450px;
+}
+
+.sun {
+  @extend .planet;
+  height: 310px;
+  width: 350px;
+  right: 80px;
+  top: 350px;
+}
