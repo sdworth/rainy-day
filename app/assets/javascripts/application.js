@@ -53,7 +53,6 @@ $(document).ready(function() {
   }
 
   function rotate(){
-    console.log('ran');
     angleCalc(neptune, 300, .001);
     angleCalc(pluto, 200, -.002);
     angleCalc(uranus, 250, -.0013);
@@ -61,8 +60,8 @@ $(document).ready(function() {
     angleCalc(mercury, 150, -.0016);
     angleCalc(luna, 400, .001);
     angleCalc(saturn, 420, .0006);
-    angleCalc(venus, 280, -.0008);
-    angleCalc(mars, 320, .0009);
+    angleCalc(venus, 310, -.0008);
+    angleCalc(mars, 360, .0009);
     angleCalc(sun, 450, -.0005);
     angleCalc(polaris, 380, .0007);
     updatePosition(neptune, '50', 'E6E6FA');
@@ -77,8 +76,6 @@ $(document).ready(function() {
     updatePosition(sun, '110', 'FFFAED');
     updatePosition(polaris, '100', 'EAE8FC');
   }
-
-
 
   function angleCalc(obj, hyp, Dang){
     xOut = Math.cos(obj.angle)*hyp;

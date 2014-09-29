@@ -16,6 +16,7 @@
 
 $navy: #2f3537;
 $light: #b2cad1;
+$pink: #FFD5EC;
 
 .clearfix {
   clear: both;
@@ -45,6 +46,11 @@ body {
   font-family: Avenir serif;
 }
 
+.form-group {
+  display: block;
+  margin-top: 10px;
+}
+
 .gif {
   @extend .clearfix;
   width: 600px;
@@ -57,21 +63,109 @@ body {
   overflow: scroll;
   min-width: 600px;
   padding: 20px;
+
+  img {
+    border-radius: 50%;
+    padding: 10px;
+    width: 600px;
+    border: 2px dotted $light;
+  }
 }
 
-img {
-  border-radius: 50%;
-  padding: 10px;
-  width: 600px;
-  border: 2px solid $light;
+.icons {
+  margin: auto;
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+
+    &:hover {
+
+    }
+  }
+}
+
+label {
+  display: inline-block;
+  width: 100px;
 }
 
 .playlist {
   height: 300px;
   width: 300px;
+  margin: auto;
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   overflow: scroll;
+  text-align: left;
+  border-bottom: 2px solid $light;
+
+  a {
+    color: lavender;
+    text-decoration: none;
+
+    &:hover {
+      text-shadow: 0 0 15px $pink;
+    }
+  }
+
+  button {
+    background-color: rgba(0,0,0,0);
+    border: 0px solid $light;
+    font-size: 16px;
+    color: $pink;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      text-shadow: 0 0 15px $pink;
+    }
+  }
+
+  .flash {
+    color: $pink;
+  }
+
+  .likes {
+    display: inline-block;
+    margin-left: 70%;
+  }
+
+  ol {
+    list-style-type: none;
+  }
+}
+
+.sidebar {
+  display: inline-block;
+  width: 320px;
+  float: left;
+  margin: 10px;
+  padding-right: 20px;
+  border-right: 2px solid $light;
+  text-align: center;
+
+  p {
+    color: $light;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.submit-button {
+  color: $light;
+  background-color: $navy;
+  border: 2px solid $light;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 0 10px $light;
+  }
 }
 
 .title {
@@ -92,20 +186,11 @@ img {
   }
 }
 
-.sidebar {
-  display: inline-block;
-  width: 320px;
-  float: left;
-  margin: 10px;
-  padding-right: 20px;
-  border-right: 2px solid $light;
-  text-align: center;
-
-  p {
-    color: $light;
-    position: relative;
-    bottom: 0;
-  }
+.textfield {
+  background-color: rgba(250, 250, 250, .75);
+  color: $navy;
+  border-radius: 10px;
+  width: 60%;
 }
 
 .wrapper {
@@ -141,7 +226,7 @@ img {
     float: none;
   }
 
-  img, .gif, .gif-container {
+  .gif-container img, .gif, .gif-container {
     min-width: 300px;
     width: 100%
   }
