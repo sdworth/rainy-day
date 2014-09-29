@@ -39,14 +39,15 @@ $(document).ready(function () {
 
     songList.append(
         '<li style="display: none">' +
+        '<div class="likes"><button id="' +
+        song.id +
+        '">❤︎</button>' +
+        '<span id="likes">0</span></div>' +
         '<a href="' +
         song.link +
         '">' +
         song.title +
-        '</a><button id="' +
-        song.id +
-        '">❤︎</button>' +
-        '<span id="likes">0</span>'
+        '</a>'
     );
   }
 

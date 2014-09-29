@@ -1,5 +1,5 @@
 == README
 
-allll the credit for rotating shadows to pgrunde. c-c-check it out: <a href=https://github.com/pgrunde/ShadowSpin>https://github.com/pgrunde/ShadowSpin</a>
+allll the credit for rotating shadows to pgrunde. c-c-check it out: https://github.com/pgrunde/ShadowSpin
 
 i stole these rain gifs from tumblr.

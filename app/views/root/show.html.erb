@@ -27,11 +27,10 @@
       <ol>
         <% @songs.each do |song| %>
           <li>
-            <%= link_to song.title, song.link %>
             <div class="likes">
-              <button id="<%= song.id %>">❤︎</button>
-              <span id="likes"><%= song.likes %></span>
+              <button id="<%= song.id %>">❤︎</button><span id="likes"><%= song.likes %></span>
             </div>
+            <%= link_to song.title, song.link %>
           </li>
         <% end %>
       </ol>
