@@ -7,32 +7,11 @@
 
       <p class="flash"></p>
 
-      <%= form_for @song do |f| %>
-
-        <div class="form-group">
-          <%= f.label :title %>
-          <%= f.text_field :title, class: 'textfield' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label 'Youtube URL' %>
-          <%= f.text_field :link, class: 'textfield' %>
-        </div>
-
-        <%= f.submit 'Submit', class: 'submit-button' %>
-      <% end %>
-
+      <%= render 'form' %>
 
       <h3>Songs:</h3>
       <ol>
-        <% @songs.each do |song| %>
-          <li>
-            <div class="likes">
-              <button id="<%= song.id %>">❤︎</button><span id="likes"><%= song.likes %></span>
-            </div>
-            <%= link_to song.title, song.link %>
-          </li>
-        <% end %>
+        <%= render @songs %>
       </ol>
 
     </div>
@@ -46,32 +25,22 @@
 
   <div class="gif-container">
 
-    <div class="gif"><%= image_tag 'rain1.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain1.gif' %></div>
 
-    <div class="gif"><%= image_tag 'rain2.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain2.gif' %></div>
 
-    <div class="gif"><%= image_tag 'rain3.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain3.gif' %></div>
 
-    <div class="gif"><%= image_tag 'rain5.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain5.gif' %></div>
 
-    <div class="gif"><%= image_tag 'rain4.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain4.gif' %></div>
 
+    <div class="gif"><%= image_tag 'rain7.gif' %></div>
 
-    <div class="gif"> <%= image_tag 'rain7.gif' %></div>
+    <div class="gif"><%= image_tag 'rain6.gif' %></div>
 
-    <div class="gif">  <%= image_tag 'rain6.gif' %>
-    </div>
+    <div class="gif"><%= image_tag 'rain9.gif' %></div>
 
-    <div class="gif">  <%= image_tag 'rain9.gif' %>
-    </div>
-
-    <div class="gif">  <%= image_tag 'rain8.gif' %>
-    </div>
-
+    <div class="gif"><%= image_tag 'rain8.gif' %></div>
   </div>
 </div>

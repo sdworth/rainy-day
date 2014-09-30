@@ -6,7 +6,13 @@ class SongsController < ApplicationController
   end
 
   def update
+    @song = Song.find(params[:id])
 
+    @song.likes = @song.likes += 1
+
+    @song.save!
+
+    render json: @song
   end
 
   private
